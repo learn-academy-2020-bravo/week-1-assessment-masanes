@@ -21,17 +21,25 @@ var temp1 = 35
 var temp2 = 350
 var temp3 = 212
 
+// const testTemp = (temp) => {
+//     let boilingPoint = 212;
+//     if (temp < boilingPoint) {
+//         return `${temp} is below boiling point`;
+//         }
+//     else if (temp > boilingPoint) {
+//         return `${temp} is above boiling point`;
+//         }
+//         else {
+//             return `${temp} is at boiling point`
+//         }
+//     }
+
+//tried ternary operators for experience and shorter code/cleaner? 
 const testTemp = (temp) => {
     let boilingPoint = 212;
-    if (temp < boilingPoint) {
-        return `${temp} is below boiling point`;
-        }
-    else if (temp > boilingPoint) {
-        return `${temp} is above boiling point`;
-        }
-        else {
-            return `${temp} is at boiling point`
-        }
+    let result = "";
+
+return result = temp < boilingPoint ? `${temp} is below boiling point` : (temp > boilingPoint ? `${temp} is above boiling point` : `${temp} is at boiling point`)
     }
 
 console.log(testTemp(temp1));
@@ -152,5 +160,5 @@ const NoKitty = (cat) => {
    }
    return newArray.join(" ");
 }
-//I basically extended this problem was having issues trying to figure out how to access name using a hof.. I'm sure there is a way cleaner shorter way to do this.
+//I basically extended this problem with an extra loop was having issues trying to figure out how to access name using a hof.. I'm sure there is a way cleaner shorter way to do this.
 console.log(NoKitty(toonimals))
