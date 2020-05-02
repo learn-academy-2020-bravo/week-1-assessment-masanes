@@ -6,10 +6,6 @@
 // --------------------1) Create a function that determines if a temperature is below boiling point, at boiling point or above boiling point. Boiling point is 212 degrees Farhenheit.
 // Use the test variables provided below. Expected outcome: "35 is below boiling point", "350 is above boiling point", "212 is at boiling point"
 
-var temp1 = 35
-var temp2 = 350
-var temp3 = 212
-
 //create a function called testTemp that takes in one parameter called temp
 //create a condition that checks if temp is below boiling point or above boiling point
 //make variable called boilingPoint
