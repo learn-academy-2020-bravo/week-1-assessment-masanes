@@ -115,7 +115,7 @@ var notAString2 = 42
 //use typeof to check datatype
 const testVowel = (str) => {
     if (typeof str !== "string") {
-       return "please insert a string, this is a " + typeof str; 
+       return "please insert a string, this function does not take in a " + typeof str; 
     }
     let vowels = ['a', 'e', 'i', 'o', 'u'];
     let splitString = str.split("");
@@ -123,7 +123,6 @@ const testVowel = (str) => {
     return splitString
     .filter(char => !vowels.includes(char.toLowerCase()))
     .join("")
-
 }
 
 console.log(testVowel(notAString1));
@@ -151,14 +150,19 @@ console.log(toonami(toonimals))
 //create a function called NoKitty
 //return animals that are not a cat
 
-const NoKitty = (cat) => {
-   let noCats = cat.filter(otherAnimals => otherAnimals.animal !== "cat")
-   let newArray = [];
+// const noKitty = (cat) => {
+//     let noCats = cat.filter(otherAnimals => otherAnimals.animal !== "cat")
+//     let newArray = [];
+ 
+//     for (let i = 0; i < noCats.length; i++) {
+//         newArray.push(noCats[i].name)
+//     }
+//     return newArray.join(" ");
+//  }
 
-   for (let i = 0; i < noCats.length; i++) {
-       newArray.push(noCats[i].name)
-   }
-   return newArray.join(" ");
+const noKitty = (cat) => {
+   let noCats = cat.filter(otherAnimals => otherAnimals.animal !== "cat")
+    return noCats.map(value => value.name).join(" ")
 }
-//I basically extended this problem with an extra loop was having issues trying to figure out how to access name using a hof.. I'm sure there is a way cleaner shorter way to do this.
-console.log(NoKitty(toonimals))
+
+console.log(noKitty(toonimals))
